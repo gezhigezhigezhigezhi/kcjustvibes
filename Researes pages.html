@@ -1,28 +1,78 @@
 <!DOCTYPE html>
 <html>
+<head>
 <title>Recoureses</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {
+  font-family: Times New Roman, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+</head>
 <body class="w3-content" style="max-width:1300px">
+<!-- Go to top -->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Go To Top</button>
+
+<!-- script for button-->
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 
 <!-- First Grid: Logo & About -->
 <div class="w3-row">
   <div class="w3-half w3-black w3-container w3-center" style="height:700px">
     <div class="w3-padding-65">
-      <h1>My Logo</h1>
+      <h1>Title goes here!</h1>
     </div>
     <div class="w3-padding-64">
-      <a href="#" class="w3-button w3-black w3-block w3-hover-blue-grey w3-padding-16">Home</a>
-      <a href="#work" class="w3-button w3-black w3-block w3-hover-teal w3-padding-16">About Us</a>
-      <a href="#work" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">Mential Illness/Addiction</a>
-      <a href="#work" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">Domestic Violence</a>
-	  <a href="#work" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">unemplayment/underaployment</a>
-	  <a href="#work" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">Family Planning</a>
-	  <a href="#work" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">Teenage Pregnancy/Single Motherhood</a>
-	  <a href="#work" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">Health Insurance</a>
-	  <a href="#work" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">Collect public data info for research purposes </a>
-	  <a href="#work" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">Bibliography</a>
+      
+      <a href="#work1" class="w3-button w3-black w3-block w3-hover-teal w3-padding-12">About Us</a>
+      <a href="#work2" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-12">Mential Illness/Addiction</a>
+      <a href="#work3" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-12">Domestic Violence</a>
+	  <a href="#work4" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-12">Unemplayment/Underaployment</a>
+	  <a href="#work5" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-12">Family Planning</a>
+	  <a href="#work6" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-12">Teenage Pregnancy/Single Motherhood</a>
+	  <a href="#work7" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-12">Health Insurance</a>
+	  <a href="#work8" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-12">Collect public data info for research purposes </a>
+	  <a href="#work9" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-12">Bibliography</a>
     </div>
   </div>
   <div class="w3-half w3-blue-grey w3-container" style="height:700px">
@@ -30,95 +80,351 @@
       <h1>About Us</h1>
       <img src="https://www.catster.com/wp-content/uploads/2018/05/A-gray-cat-crying-looking-upset.jpg" alt="Person" style="width:50%">
       <div class="w3-left-align w3-padding-large">
-        <p>Lorem ipusm sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-        <p>Lorem ipusm sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+        <p>We are a non-profit website dedicated to helping and providing aids to at-risk women in Austin, Texas. 
+		In our city alone, we have over 2,000 people experiencing homelessness with at least 40% of these people being women. 
+		Around the country,there is a rise in homelessness due to fast population growths in major cities, which in turn 
+		contributes to rising housing costs. Almost every group of people are affected by homelessness including veterans, 
+		survivors of domestic violence, young children, runaway youth, refugees, and immigrant families. Our aim is to provide 
+		resources to empower women with information from our database to help them meet their needs in various areas.</p>
       </div>
     </div>
   </div>
 </div>
+
+
 
 <!-- Second Grid: Work & Resume -->
 <div class="w3-row">
-  <div class="w3-half w3-light-grey w3-center" style="min-height:800px" id="work">
+  <div class="w3-half w3-light-grey w3-center" style="min-height:800px" id="work2">
     <div class="w3-padding-64">
-      <h2>My Work</h2>
-      <p>Some of my latest projects.</p>
+      <h2>Mential Illness/Addiction</h2>
+      <p>According to the Mayo Clinic, a mental illness is defined to be 
+	  any disorder that causes a change in a person’s behavior or mood, 
+	  and disrupts a person’s ability to function [2]. Mental illness 
+	  is thought to affect 25% of the homeless population in America, 
+	  even being the third largest cause for homelessness. It can hinder 
+	  a person’s ability to create and maintain stable relationships, 
+	  jobs, and affect an individual's ability to perform daily care 
+	  activities [3]. The National Bureau of Economic Research reports 
+	  that there is a high correlation between individuals suffering 
+	  from a mental illness and self-medication. Among individuals 
+	  suffering from a diagnosed mental illness, about 69% suffer 
+	  from alcoholism, 84% suffer from cocaine addiction, and 68% 
+	  suffer from nicotine addiction [4]. 
+</p>
     </div>
-    <div class="w3-row">
-      <div class="w3-half">
-        <img src="/w3images/coffee.jpg" style="width:100%">
-      </div>
-      <div class="w3-half">
-        <img src="/w3images/workbench.jpg" style="width:100%">
-      </div>
-    </div>
-    <div class="w3-row w3-hide-small">
-      <div class="w3-half">
-        <img src="/w3images/workbench.jpg" style="width:100%">
-      </div>
-      <div class="w3-half">
-        <img src="/w3images/coffee.jpg" style="width:100%">
-      </div>
-    </div>
-
-    <div class="w3-row w3-hide-small">
-      <div class="w3-half">
-        <img src="/w3images/sound.jpg" style="width:100%">
-      </div>
-      <div class="w3-half">
-        <img src="/w3images/workbench.jpg" style="width:100%">
-      </div>
-    </div><br>
-    <p>Just call me awesome.</p>
   </div>
   <div class="w3-half w3-indigo w3-container" style="min-height:800px">
     <div class="w3-padding-64 w3-center">
-      <h2>Resume</h2>
-      <p>A draft from my CV</p>
-      <div class="w3-container w3-responsive">
-        <table class="w3-table">
-          <tr>
-            <th>Year</th>
-            <th>Title</th>
-            <th>Where</th>
-          </tr>
-          <tr class="w3-white">
-            <td>2012-2016</td>
-            <td>The rest is history..</td>
-            <td>Lorem ipsum</td>
-          </tr>
-          <tr>
-            <td>2009-2012</td>
-            <td>Started my own company</td>
-            <td>My Garage</td>
-          </tr>
-          <tr class="w3-white">
-            <td>2008-2009</td>
-            <td>Started working for Lorem</td>
-            <td>London, UK</td>
-          </tr>
-          <tr>
-            <td>2005-2008</td>
-            <td>Degree in Bachelor of Design</td>
-            <td>Harvard, USA</td>
-          </tr>
-          <tr class="w3-white">
-            <td>2002-2005</td>
-            <td>Degree in Bachelor of Business</td>
-            <td>RMIT University, Melbourne, Australia</td>
-          </tr>
-          <tr class="w3-hide-medium">
-            <td>2002-2005</td>
-            <td>Degree in Bachelor of Business</td>
-            <td>RMIT University, Melbourne, Australia</td>
-          </tr>
-        </table>
-      </div>
+      <h2>Information!</h2>
+      <p>The National Alliance on Mental Illness (NAMI) offers free support groups for adults living with mental illnesses. It is a safe space to share experiences with other peers while being led by trained facilitators.</p>
+
+		<p>North Austin
+		2nd and 4th Wednesdays from 7 - 8:30 pm
+		Hillcrest Baptist Church (3838 Steck Ave, Austin, TX)
+		Groups meets in Room A161.</p>
+
+		<p>1st and 3rd Wednesdays from 7 - 8:30 pm
+		Bluebonnet Trails Community Services (1009 North Georgetown St, Round Rock, TX)
+		Group meets in D1.</p>
+
+		<p>South Austin
+		1st and 3rd Wednesdays 6:30 - 8 pm
+		Integral Care (1700 South Lamar Blvd, Austin, TX)</p>
+
+		<p>National Suicide Prevention Lifeline (1-800-273-8255)
+		This is a 24/7 free and confidential hotline where anyone can call for themselves or their loved ones to talk with a counselor. </p>
+
+		<p> <a href="https://www.austinrecovery.org/">Austin Recovery Link</a>
+		</p> 
     </div>
   </div>
 </div>
 
-<!-- Third Grid: Swing By & Contact -->
+
+
+<!-- Second Grid: Work & Resume -->
+<div class="w3-row">
+  <div class="w3-half w3-light-grey w3-center" style="min-height:800px" id="work3">
+    <div class="w3-padding-64">
+      <h2>Domestic Violence</h2>
+      <p>According to the Family and Youth Services Bureau, more than 80% of homeless 
+	  women and children report having experienced domestic violence. Almost 57% of 
+	  homeless women report that domestic violence was the number one cause for their 
+	  homelessness. Furthermore, about 38% of all domestic violence victims will become 
+	  homeless at some point in their lifetime [5]. </p>
+    </div>
+  </div>
+  <div class="w3-half w3-indigo w3-container" style="min-height:800px">
+    <div class="w3-padding-64 w3-center">
+      <h2>Resources:</h2>
+      <p>National Domestic Violence Hotline (1-800-799-SAFE)<br>
+	  National Sexual Assault Hotline (1-800-656-HOPE)</p>
+
+		<p><a href="https://www.texasadvocacyproject.org/">Texas Advocacy Project Link</a><br>
+		The Texas Advocacy Project in Austin offers emergency shelter, legal and financial assistance, and counseling services. <br>
+		Phone: (512-476-5377)</p>
+
+		<p><a href="https://www.safeaustin.org/">SAFE Link</a><br>
+		SAFE in Austin offers emergency shelter, legal and financial assistance, and counseling services. <br>
+		Phone: (512-267-7233)</p>
+
+		<p><a href="http://www.afssaustin.org/programs-and-services/">Asian Family Support Services of Austin Link</a><br><br>
+		The Asian Family Support Services of Austin offers emergency shelter, legal and financial assistance, and counseling services. <br>
+		Phone: (512-358-6318)</p>
+
+      
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Second Grid: Work & Resume -->
+<div class="w3-row">
+  <div class="w3-half w3-light-grey w3-center" style="min-height:800px" id="work4">
+    <div class="w3-padding-64">
+      <h2>Unemplayment/Underaployment</h2>
+      <p>Unemployment is defined as individuals who are currently unemployed but are 
+	  actively seeking employment. Underemployment is defined as individuals who are 
+	  highly skilled but are not working at their full capacity [6]. Although 
+	  unemployment rates are declining, homelessness rates continue to increase due 
+	  to the aftermath of the Great Recession as well as wages not keeping up with 
+	  the rising costs of living [7]. According to the Bureau of Labor Statistics, 
+	  the current unemployment rate in Austin is 2.6%.</p>
+    </div>
+    
+  </div>
+  <div class="w3-half w3-indigo w3-container" style="min-height:800px">
+    <div class="w3-padding-64 w3-center">
+      <h2>Resources!</h2>
+      <p>https://twc.texas.gov/jobseekers/unemployment-benefits-services<br>
+			Texas Unemployment Benefit Services </p>
+
+			<p>http://www.goodwill.org/locator/?service%5B%5D=4&location=Austin<br>
+			Goodwill Career Center<br>
+			Visit the Goodwill Career Center with a career case manager to develop a training or education plan to be on track to becoming employed.</p> 
+
+			<p>2729 E. Whitestone Blvd.<br>
+			Cedar Park, TX 78613<br>
+			Phone: (512-681-3349)</p>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Second Grid: Work & Resume -->
+<div class="w3-row">
+  <div class="w3-half w3-light-grey w3-center" style="min-height:800px" id="work5">
+    <div class="w3-padding-64">
+      <h2>Healthcare and Family Planning</h2>
+      <p>In general, 73% of homeless women are unable to meet medical, dental, 
+	  mental, prenatal, and other preventative care. They face higher rates of 
+	  chronic illnesses including asthma, mental diseases, anemia, bronchitis, 
+	  and hypertension among other problems. Furthermore, homeless women have 
+	  higher pregnancy and unintended pregnancy rates than the rest of the population. 
+	  Homeless women are more often provided with user-based failure rates rather than 
+	  long-acting reversible contraceptives. They are more likely to have preterm 
+	  deliveries than other women [8].</p>
+    </div>
+  </div>
+  <div class="w3-half w3-indigo w3-container" style="min-height:800px">
+    <div class="w3-padding-64 w3-center">
+      <h2>Resources!</h2>
+      <p>http://www.volclinic.org/<br>
+		Volunteer Healthcare Clinic<br>
+		The Volunteer Healthcare Clinic offers healthcare services to the uninsured and working poor communities in Austin. </p>
+
+		<p>4215 Medical Pkwy, Austin, TX 78756<br>
+		Phone: (512-459-6002)<br>
+		http://www.cddoyleclinic.com/<br>
+		C.D. Doyle Clinic<br>
+		The C.D. Doyle Clinic is a student-run teaching clinic under the Dell Medical School that offers free healthcare services. The clinic is run by undergraduate volunteers, medical students, and attending physicians. </p>
+
+
+
+		<p>Sunday (2-5 pm)<br>
+		304 E 7th St, Austin, TX 78701<br>
+		Phone: (409-571-9362)</p>
+
+		<p>https://www.austinpcc.org/<br>
+		PCC Center for Women’s Health<br>
+		The PCC Center for Women’s Health offers affordable healthcare to the underserved and uninsured communities in Austin.</p> 
+
+		<p>2909 N Interstate Hwy 35, Austin, TX 78722<br>
+		Phone: (512-478-4939)</p>
+
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Second Grid: Work & Resume -->
+<div class="w3-row">
+  <div class="w3-half w3-light-grey w3-center" style="min-height:800px" id="work6">
+    <div class="w3-padding-64">
+      <h2>Single Parenthood and Family Services </h2>
+      <p>Family homelessness is a growing issue regardless of race, and is due to 
+	  the lack of affordable housing, and increasing costs of living. It is estimated 
+	  that about 37% of all homeless populations are families [9]. The Austin Area 
+	  Command of the the Salvation Army reports that approximately 100 mothers and 
+	  over 200 children are on the waiting list every day for emergency shelter [10]. </p>
+    </div>
+  </div>
+  <div class="w3-half w3-indigo w3-container" style="min-height:800px">
+    <div class="w3-padding-64 w3-center">
+      <h2>Resources!</h2>
+      <p>https://foundcom.org/housing/at-risk-homeless-families/<br>
+		Foundation Communities<br>
+		This organization helps provide housing for at-risk/homeless families including children. They provide reduced rents, employment assistance, education, and health programs. <br>
+		Phone: (512-610-7392)</p>
+
+		<p>Women and Children’s Center<br>
+		This is an emergency shelter with the Salvation Army that provides a place for single mothers and their children. They also provide job training and GED classes. <br>
+		Phone: (512-476-1111)</p>
+
+		<p>http://frontsteps.org/<br>
+		Front Steps<br>
+		This organization provides shelter services, substance abuse programs, and healthcare services. </p>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Second Grid: Work & Resume -->
+<div class="w3-row">
+  <div class="w3-half w3-light-grey w3-center" style="min-height:800px" id="work7">
+    <div class="w3-padding-64">
+      <h2>Health Insurance</h2>
+      <p>There is a general consensus among the public that supports the idea that medical attention and 
+	  healthcare are a basic human rights that should be accessible to all people [11].</p>
+    </div>
+  </div>
+  <div class="w3-half w3-indigo w3-container" style="min-height:800px">
+    <div class="w3-padding-64 w3-center">
+      <h2>Resources!</h2>
+      <p>https://www.centralhealth.net/map/<br>
+		The Medical Access Program<br>
+		MAP offers health care insurance for low income Travis County residents.</p>
+
+		<p>https://aspe.hhs.gov/system/files/pdf/198441/HomelessHealth.pdf<br>
+		Affordable Care Act<br>
+		The Affordable Care Act states that homeless individuals are eligible for health care insurance through an expansion of Medicaid. <br>
+		Phone: (1-855-889-4325)</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Second Grid: Work & Resume -->
+<div class="w3-row">
+  <div class="w3-half w3-light-grey w3-center" style="min-height:800px" id="work8">
+    <div class="w3-padding-64">
+      <h2>Public Health Data for Research Purposes</h2>
+      <p>The purposes of this anonymous survey is to collect data from the users of this 
+	  website in order to better understand the needs of the at-risk homeless populations 
+	  of Austin. With this information, we hope to develop models that could better 
+	  establish cause and effect relationships between different factors in order to 
+	  eventually construct better policies geared towards helping the at-risk 
+	  populations in Austin. </p>
+    </div>
+  </div>
+  <div class="w3-half w3-indigo w3-container" style="min-height:800px">
+    <div class="w3-padding-64 w3-left">
+      <h2>Survey!</h2>
+      <form action="index.php" name="my form" method="POST">
+	  1. Are you a woman?<br>
+		  <input type="radio" name="sex" values="Yes"> Yes
+		  <input type="radio" name="sex" values="No"> No<br>
+	  2. Are you homeless and living in Austin?<br>
+		<input type="radio" name="sex" values="Yes"> Yes
+		<input type="radio" name="sex" values="No"> No<br>
+	3. If yes, for how long?
+		<textarea rows="1" cols="15" placeholder="Type Here!"> </textarea><br>
+	4. Do you have children?
+		<input type="radio" name="sex" values="Yes"> Yes
+		<input type="radio" name="sex" values="No"> No<br>
+	5. Do you have pets?
+		<input type="radio" name="sex" values="Yes"> Yes
+		<input type="radio" name="sex" values="No"> No<br>
+	6. Are you a victim of domestic violence?
+		<input type="radio" name="sex" values="Yes"> Yes
+		<input type="radio" name="sex" values="No"> No<br>
+	7. Do you suffer from mental illness or addiction?
+		<input type="radio" name="sex" values="Yes"> Yes
+		<input type="radio" name="sex" values="No"> No<br>
+	8. Have you ever been incarcerated?
+		<input type="radio" name="sex" values="Yes"> Yes
+		<input type="radio" name="sex" values="No"> No<br>
+	9. Are you unemployed?
+		<input type="radio" name="sex" values="Yes"> Yes
+		<input type="radio" name="sex" values="No"> No<br>
+	10. Do you have health insurance?
+		<input type="radio" name="sex" values="Yes"> Yes
+		<input type="radio" name="sex" values="No"> No<br>
+	11. Are you able to access healthcare?
+		<input type="radio" name="sex" values="Yes"> Yes
+		<input type="radio" name="sex" values="No"> No<br>
+	12. If not, please explain the barriers that prevent you from accessing health care:
+		<textarea rows="1" cols="15" placeholder="Type Here!"/>  </textarea><br>
+	13. Have you experienced problems in finding shelter?
+		<input type="radio" name="sex" values="Yes"> Yes
+		<input type="radio" name="sex" values="No"> No<br>
+	14. If yes, please explain the barriers that prevent you from finding shelter:
+		<textarea rows="1" cols="15" placeholder="Type Here!"/> </textarea><br>
+	15. Did you find the resources you were looking for on this website?
+		<input type="radio" name="sex" values="Yes"> Yes
+		<input type="radio" name="sex" values="No"> No<br>
+	16. If not, please explain how we could improve our resources:
+		<textarea rows="1" cols="15" placeholder="Type Here!"/> </textarea><br>
+		
+		
+	  </form>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Second Grid: Work & Resume -->
+<div class="w3-row">
+  <div class="w3-half w3-light-grey w3-center" style="min-height:800px" id="work9">
+    <div class="w3-padding-64">
+      <h2>Bibliography</h2>
+      <p>[1] “About Homelessness_old.” ECHO, www.austinecho.org/about-homelessness/.<br>
+[2] “Mental Illness.” Mayo Clinic, Mayo Foundation for Medical Education and Research, 13 Oct. 2015, www.mayoclinic.org/diseases-conditions/mental-illness/symptoms-causes/syc-20374968.<br>
+[3] “Mental Illness and Homelessness.” Mental Illness and Homelessness, National Coalition for the Homeless, www.nationalhomeless.org/factsheets/Mental_Illness.pdf. <br>
+[4] “The Connection Between Mental Illness and Substance Abuse.” Dual Diagnosis, www.dualdiagnosis.org/mental-health-and-addiction/the-connection/.<br>
+[5] “Domestic Violence and Homelessness: Statistics (2016).” Children's Bureau | ACF, www.acf.hhs.gov/fysb/resource/dv-homelessness-stats-2016.</p></p>
+    </div>
+  </div>
+  <div class="w3-half w3-indigo w3-container" style="min-height:800px">
+    <div class="w3-padding-64 w3-center">
+      <p>[6] Kenton, Will. “Underemployment.” Investopedia, Investopedia, 13 Dec. 2018, www.investopedia.com/terms/u/underemployment.asp. <br>
+[7] “With Unemployment at Record Lows, Why Is Homelessness Still on the Rise?” Bowery Residents' Committee, www.brc.org/unemployment-record-lows-why-homelessness-still-rise.<br>
+[8] “Women's Health Care Physicians.” Group B Strep and Pregnancy - ACOG, www.acog.org/Clinical-Guidance-and-Publications/Committee-Opinions/Committee-on-Health-Care-for-Underserved-Women/Health-Care-for-Homeless-Women.<br>
+[9] “The Facts About Family Homelessness | Doorways.” Doorways for Women and Families, www.doorwaysva.org/our-work/education-advocacy/the-facts-about-family-homelessness/.<br>
+[10] Stayton, Jennifer. “Family Homelessness In Austin Is A 'Serious Crisis,' Says Salvation Army.” KUT, www.kut.org/post/family-homelessness-austin-serious-crisis-says-salvation-army.</p></p>
+      
+    </div>
+  </div>
+</div>
+
+
+
+ <!-- Third Grid: Swing By & Contact -->
 <div class="w3-row" id="contact">
   <div class="w3-half w3-dark-grey w3-container w3-center" style="height:700px">
     <div class="w3-padding-64">
